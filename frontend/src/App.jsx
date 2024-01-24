@@ -1,8 +1,17 @@
+import Footer from './components/Footer'
+import Navbar from './components/Navbar'
+import {Route, Routes} from 'react-router-dom'
+import Home from './components/Home'
 
-const App=() =>{
+const App=() => {
   return(
-    <div>App</div>
+    <div>
+      <Navbar/>
+      <Routes>
+        <Route exact path="/" element={<Home/>}/>
+      </Routes>
+      <Footer/>
+    </div>
   )
 }
 
-export default App
